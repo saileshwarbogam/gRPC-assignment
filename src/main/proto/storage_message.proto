@@ -1,0 +1,19 @@
+syntax  = "proto3";
+
+package pcbook_proto;
+
+import "memory_message.proto";
+option go_package = "/";
+option java_package = "com.pcbook.pb";
+option java_multiple_files = true;
+
+message Storage {
+    enum Driver {
+        UNKNOWN = 0;
+        HDD = 1;
+        SSD = 2;
+    }
+
+    Driver driver = 1;
+    Memory memory = 2;
+}
